@@ -282,14 +282,6 @@
 }
 </style>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM Loaded")
-    const btn = document.getElementById("btn1");
-    const span = document.getElementById("span1");
-    btn.addEventListener("click", function() {
-      span.innerHTML = window.innerHeight+", "+window.innerWidth;
-    })
-  })
 </script>
 </head>
 <body>
@@ -306,7 +298,7 @@
 		<!-- Button Section -->
 		<div class="button-container">
 			<button class="action-btn btn-1" id="btn1">
-				<span class="btn-text" id="span1">Schedule</span>
+				<span class="btn-text">Schedule</span>
 				<span class="btn-shine"></span>
 			</button>
 
