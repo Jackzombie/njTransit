@@ -261,7 +261,6 @@
     font-size: 1rem;
     padding: 16px 20px;
     gap: 10px;
-    color:green;
   }
 
   .btn-icon svg {
@@ -296,7 +295,6 @@
     font-size: 1.1rem;
     padding: 18px 25px;
     gap: 12px;
-    color:blue;
   }
 
   .btn-icon svg {
@@ -331,7 +329,6 @@
     font-size: 1rem;
     padding: 16px 20px;
     gap: 10px;
-    color:green;
   }
 
   .btn-icon svg {
@@ -346,24 +343,14 @@
 }
 </style>
 <script>
-const buttons = [
-  document.getElementById('btn1'),
-  document.getElementById('btn2'),
-  document.getElementById('btn3'),
-  document.getElementById('btn4'),
-  document.getElementById('btn5')
-];
-
-buttons.forEach((btn, index) => {
-  btn.addEventListener('click', function() {
-    this.style.transform = 'scale(0.95)';
-    setTimeout(() => {
-      this.style.transform = '';
-    }, 200);
-    
-    console.log(`Button ${index + 1} clicked!`);
-  });
-});
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM Loaded")
+    const btn = document.getElementById("btn1");
+    const span = document.getElementById("span1");
+    btn.addEventListener("click", function() {
+      span.innerHTML = window.innerHeight+", "+window.innerWidth;
+    })
+  })
 </script>
 </head>
 <body>
@@ -380,7 +367,7 @@ buttons.forEach((btn, index) => {
 		<!-- Button Section -->
 		<div class="button-container">
 			<button class="action-btn btn-1" id="btn1">
-				<span class="btn-text">Schedule</span>
+				<span class="btn-text" id="span1">Schedule</span>
 				<span class="btn-shine"></span>
 			</button>
 
